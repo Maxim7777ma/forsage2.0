@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'courses/css/styles.css' %}">
+    <title>Список курсів</title>
+</head>
+<body>
+
+    <h1>Список курсів:</h1>
+    <div class="block_one">
+        {% for course in courses %}
+            <div class="block_start">
+                <h3>{{ course.title }}</h3> 
+                <p class="description1">{{ course.description }}</p>
+                <p class="data_start">{{ course.start_date }}</p> 
+            </div>  
+        {% endfor %}
+   </div>
+   <div class="go">
+        <h3>Для запису телефонуйте за номером телефону</h3>
+   </div>
+   <section class="contact" id="contact">
+        <h2>Контактна інформація</h2>
+        <p>Адреса: м. Ваш город, ул. Ваша улица, д. Ваш номер</p>
+        <p>Телефон: +38(097) 456-789</p>
+        <p>Email: info@example.com</p>
+    </section>
+</body>
+</html>

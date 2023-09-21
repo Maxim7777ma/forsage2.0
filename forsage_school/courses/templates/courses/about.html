@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'courses/css/styles_about.css' %}">
+<head>
+    <title>Форсаж</title>
+</head>
+<body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Головна</a></li>
+                    <li><a href="/">Про нас</a></li>
+                    <li><a href="{% url 'course_list' %}">Курси</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                
+                </ul>
+            </nav>
+        </header>
+    
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Ласкаво просимо до автошколи "Форсаж"</h1>
+                <p>Навчіться водінню з нами та отримайте посвідчення водія!</p>
+                <a href="{% url 'course_list' %}" class="btn-1">Дізнатись більше</a>
+            </div>
+        </section>
+    
+        <section class="features">
+            <div class="feature">
+                <h2>Досвідчені інструктори</h2>
+                <p>Наші інструктори з багаторічним досвідом допоможуть вам освоїти навички водіння.</p>
+            </div>
+            <div class="feature">
+                <h2>Різноманітні курси</h2>
+                <p>Ми пропонуємо різні курси, включаючи водіння на міських дорогах, далеких маршрутах та інші.</p>
+            </div>
+            <div class="feature">
+                <h2>Індивидуальний підхід</h2>
+                <p>Ми підберемо курс, який підходить саме вам, враховуючи ваші потреби та рівень підготовки.</p>
+            </div>
+        </section>
+        
+        <section class="need">
+                <h2>Для вступу потрібно:</h2>
+            <div class='block_photo'>
+                <div class='passport'>
+                    <img src="{% static 'images/passport_ukr.jpg' %}" alt="Описание изображения">
+                    <p>Паспорт та прописка</p>
+                </div>
+                <div class='IPN'>
+                    <img src="{% static 'images/IPN.jpg' %}" alt="Описание изображения">
+                    <p>Індифікаційний номер ИПН</p>
+                </div>
+            </div>
+            <div class='block_photo2'>    
+                <div class='photos'>
+                    <img src="{% static 'images/imagess.jpg' %}" alt="Описание изображения">
+                    <p>Фото 3*4, 2 одиниці </p>
+                </div>
+                <div class='medical'>
+                    <img src="{% static 'images/medical.jpg' %}" alt="Описание изображения">
+                    <p>Медична довідка</p>
+                </div>
+            </div>    
+
+
+
+
+        </section>    
+
+
+        <section class="contact" id="contact">
+        <div class="contact2">    
+            <h2>Контактна інформація</h2>
+            <p>Адресa: м. Ваш город, ул. Ваша улица, д. Ваш номер</p>
+            <p>Телефон: +38(097) 456-789</p>
+            <p>Email: info@example.com</p>
+        </div>
+        <div class="maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2646.572240758269!2d34.99741267707196!3d48.44554907127915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe36d8698dded%3A0x5cebfc4017ef302a!2z0YPQuy4g0KDQsNCx0L7Rh9Cw0Y8sIDgzLCDQlNC90LXQv9GALCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1695336438457!5m2!1sru!2sua"  referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>    
+        </section>
+        <div class='btn2'>
+            <a href="{% url 'course_list' %}" class="btn-2">Перейти до курсів</a>
+        </div>
+
+
+
+
+        <footer>
+            <p class='footer_p'> © 2023 Автошкола "Форсаж". Всі права захищені.</p>
+        </footer>
+</body>
+</html>
