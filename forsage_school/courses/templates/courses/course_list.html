@@ -1,14 +1,18 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    
+   
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'courses/css/styles.css' %}">
     <title>Список курсів</title>
 </head>
 <body>
-
-    <h1>Список курсів:</h1>
+    <div class="h1_class">
+        <h1>Список курсів:</h1>
+        <div>
+            <a href="/">Вихід</a>
+        </div>
+    </div>
     <div class="block_one">
         {% for course in courses %}
             <div class="block_start">
@@ -21,11 +25,15 @@
    <div class="go">
         <h3>Для запису телефонуйте за номером телефону</h3>
    </div>
+<footer>
    <section class="contact" id="contact">
-        <h2>Контактна інформація</h2>
-        <p>Адреса: м. Ваш город, ул. Ваша улица, д. Ваш номер</p>
-        <p>Телефон: +38(097) 456-789</p>
-        <p>Email: info@example.com</p>
+    <h2>Контактна інформація</h2>
+    <p>Адресa: м. Дніпро, ул. Рабоча, д.83 </p>
+    <a href="tel:+380505673594">+380 (50) 567 35 94 - Vodafone</a>
+    <br>
+    <a href="tel:+380687313709">+380 (68) 731 37 09 - Kyivstar</a>
+    <p>Ольга Викторовна</p>
     </section>
+</footer> 
 </body>
 </html>

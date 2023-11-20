@@ -1,0 +1,67 @@
+/* Стиль для всего тела страницы */
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    height: 50rem;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Стиль для контейнера с вопросом и ответами */
+.quiz-container {
+    display: flex;
+    margin-top: 15rem;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+/* Стиль для заголовка с вопросом */
+.quiz-question {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+/* Стиль для изображения вопроса */
+.quiz-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Стиль для текста вопроса */
+.quiz-text {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+/* Стиль для ответов */
+.quiz-answer {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+/* Стиль для кнопки "Ответить" */
+.quiz-submit {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Стиль для выбранного ответа (можете дополнить) */
+.quiz-answer input:checked + label {
+    background-color: #4CAF50;
+    color: #fff;
+}

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'courses',
+    
 ]
 
 MIDDLEWARE = [
@@ -50,8 +51,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
 ]
-
+SESSION_ENGINE = 'django.contrib.sessions.backends.db' 
+SESSION_COOKIE_AGE = 1800  
 ROOT_URLCONF = 'forsage_school.urls'
 
 TEMPLATES = [

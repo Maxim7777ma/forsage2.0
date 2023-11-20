@@ -1,0 +1,90 @@
+/* Стиль для страницы результатов викторины */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Фоновый цвет страницы */
+    color: #333; /* Цвет текста */
+    margin: 0;
+    padding: 0;
+}
+.block_menu{
+    margin-left: 1rem;
+}
+.block_menu p{
+    margin-left: 1.1rem;
+}
+.block_menu h2{
+    margin-left: 1.7rem;
+}
+
+h1 {
+    color: #4CAF50; /* Зеленый цвет для заголовка */
+}
+
+h2 {
+    color: #4CAF50; /* Зеленый цвет для второго уровня заголовка */
+}
+
+.block_result {
+    background-color: #fff; /* Белый фон блока с результатами */
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd; /* Граница блока */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень блока */
+}
+
+.question {
+    border: 1px solid #ddd; /* Граница вопроса */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+img {
+    max-width: 100%; /* Ограничение максимальной ширины изображения */
+    border: 1px solid #ddd; /* Граница изображения */
+    border-radius: 5px;
+    margin-left: 0.8rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding-left: 1rem;
+    margin: 5px 0;
+}
+
+/* Зеленый цвет для правильных ответов */
+li[style="color: green"] {
+    color: #4CAF50;
+}
+
+
+
+a {
+    background: linear-gradient(135deg, #4CAF50, #45a049); /* Градиентный фон */
+    color: #fff;
+    display: flex;
+    padding: 15px 30px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    justify-content: center;
+}
+
+/* Стиль при наведении на кнопку */
+a:hover {
+    background: linear-gradient(135deg, #45a049, #4CAF50);
+    color: #fff;
+    border-color: #45a049;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}

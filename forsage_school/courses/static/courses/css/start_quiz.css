@@ -1,0 +1,115 @@
+/* Reset some default browser styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    color: #333;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.block {
+    text-align: center;
+}
+
+/* Style the traffic light container */
+.traffic-light {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for each light in the traffic light */
+.light {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    height: 15rem;
+    width: 15rem;
+    font-size: 25px;
+    flex-direction: row;
+    justify-content: center;
+    border: solid 10px black;
+}
+
+.yellow {
+    background-color: yellow;
+    height: 15rem;
+    width: 15rem;
+    border: solid 10px black;
+}
+
+.green {
+    background-color: rgb(34, 215, 34);
+    display: flex;
+    align-items: center;
+    height: 15rem;
+    width: 15rem;
+    flex-direction: row;
+    justify-content: center;
+    border: solid 10px black;
+}
+
+/* Style the home button */
+.home-button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+/* Style the "Начать викторину" button */
+.animated-button {
+    background-color: rgb(34, 215, 34);
+    color: white;
+    padding: 20px 5px;
+    border: none;
+    font-size: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.advertising{
+    background: #f3fffe;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border:solid 1px black;
+    height: 50rem;
+    width: 70%;
+    padding: 1rem;
+}
+

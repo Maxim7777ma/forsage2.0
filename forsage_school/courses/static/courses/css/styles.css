@@ -1,107 +1,137 @@
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
+    background-color: #f0f5e0; /* Зеленый фон */
+    color: #333; /* Темный текст */
 }
-.block_one{
+
+/* Стили для заголовка страницы */
+.h1_class {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
     display: flex;
-    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.block_start{
-    background: rgba(237, 236, 236, 0.757);
-    border: 0.1rem solid black;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-    width: 30%;
+/* Стили для ссылки "x" */
+.h1_class div {
+    border-radius: 50%;
+    background-color: red;
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-right: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Добавим позиционирование */
+    animation: borderAnimation 4s linear infinite; /* Анимация бордера */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Тень кнопки */
 }
 
-h1 {
+/* Анимация бордера */
+@keyframes borderAnimation {
+    0% {
+        border: 2px solid rgba(0, 0, 0, 0); /* Начальный бордер (нулевой прозрачности) */
+    }
+    25% {
+        border: 2px solid #fff; /* Белый бордер */
+    }
+    50% {
+        border: 2px solid #000000; /* Красный бордер */
+    }
+    75% {
+        border: 2px solid #fff; /* Белый бордер */
+    }
+    100% {
+        border: 2px solid rgba(0, 0, 0, 0); /* Конечный бордер (нулевой прозрачности) */
+    }
+}
+.h1_class a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative; /* Добавим относительное позиционирование */
+}
+
+/* Стиль для нажатия на кнопку закрытия "x" */
+.h1_class a:hover {
+    color: #000000; /* Измените цвет текста при наведении (красный) */
+}
+
+/* Стиль кнопки закрытия "x" при активации (нажатии) */
+.h1_class a:active {
+    transform: scale(0.9); /* Уменьшим размер при нажатии */
+}
+
+/* Стили для основного блока с курсами */
+.block_one {
+    margin: 20px;
+}
+
+/* Стили для каждого блока курса */
+.block_start {
+    background-color: #dff0d8; /* Бледно-зеленый фон для блока курса */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Стили для заголовка курса */
+.block_start h3 {
+    color: #5cb85c; /* Зеленый заголовок */
+}
+
+/* Стили для описания курса */
+.description1 {
+    color: #333; /* Темный текст */
+}
+
+/* Стили для даты начала курса */
+.data_start {
+    color: #5cb85c; /* Зеленая дата */
+}
+
+/* Стили для блока "Для запису телефонуйте" */
+.go {
+    background-color: #5cb85c; /* Зеленый фон */
+    color: #fff; /* Белый текст */
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Стили для подвала страницы */
+footer {
+    background-color: #5cb85c; /* Зеленый фон */
+    color: #fff; /* Белый текст */
     padding: 20px;
     text-align: center;
-    color: #000000;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block;}
-    h1 {
-        font-size: 36px;
-        color: #333; 
-        text-transform: uppercase;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
-        animation: shadowAnimation 2s alternate infinite; 
-    }
-    
-    @keyframes shadowAnimation {
-        0% {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-        }
-        100% {
-            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
-        }}
-
-h3{
-    color: #000000;
+    font-size: 20px;
 }
 
-.description1{
-    color: #007acc;
-}
-
-.data_start{
-    color: darkred;
-}
-
-
-a {
-    color: #007acc;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.go{
-    text-align: center;
-    background:  #f4f4f4;
-    margin-bottom: -0.7rem;
-    padding: 1rem;
-
-}
-.go h3{
-    color: #000000;
-    font-size: 2rem;
-}
-
-
+/* Стили для контактной информации */
 .contact {
-    background-color: #f4f4f4; 
-    padding: 40px; 
-    text-align: center; 
-    font-size: 18px;
+    margin: 20px;
 }
 
-.contact h2 {
-    color: #333; 
-    font-size: 24px; 
-}
-
-.contact p {
-    margin: 10px 0; 
-}
-
+/* Стили для контактных ссылок */
 .contact a {
-    color: #007acc;
-    text-decoration: none; 
-    font-weight: bold;
+    padding: 10px;
+    color: #fff; /* Белый текст */
+    text-decoration: none;
+    border-bottom: 2px solid transparent; /* Начальное нижнее подчеркивание (прозрачное) */
+    transition: border-color 0.3s ease; /* Анимация изменения цвета бордера */
+    cursor: pointer; /* Смена курсора при наведении */
 }
 
+/* Анимация при наведении на номер телефона */
 .contact a:hover {
-    text-decoration: underline;
+    border-color: #fff; /* Изменение цвета бордера на белый при наведении */
 }
 
-
+@media (max-width: 768px){
+    body{height: 10rem;}
+}

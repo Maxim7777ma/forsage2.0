@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+   
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'courses/css/questing.css' %}">
+    <title>Список курсів</title>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1 class="quiz-question">Вопрос:</h1>
+
+        {% if question.image %}
+        <img src="{{ question.image }}" alt="Вопрос" class="quiz-image">
+        {% endif %}
+
+        <p class="quiz-text">{{ question.text }}</p>
+
+        <form method="post" action="{% url 'answer_question' question.id %}">
+            {% csrf_token %}
+            <label class="quiz-answer">
+                <input type="radio" name="user_answer" value="1">
+                {{ question.option1 }}
+            </label>
+            <label class="quiz-answer">
+                <input type="radio" name="user_answer" value="2">
+                {{ question.option2 }}
+            </label>
+            <label class="quiz-answer">
+                <input type="radio" name="user_answer" value="3">
+                {{ question.option3 }}
+            </label>
+            <input type="submit" value="Відповісти" class="quiz-submit">
+        </form>
+    </div>
+
+</body>
+</html>

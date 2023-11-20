@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'courses/css/resultats.css' %}">
+    <title>Результаты викторины</title>
+</head>
+
+<body>
+    {% block content %}
+    <div class='block_menu'>
+    <h1>Результаты викторины:</h1>
+    <p>Вы набрали {{ score }} баллов.</p>
+    <p>Поздравляем с завершением викторины!</p>
+
+    <h2>Список вопросов</h2>
+    </div>
+    <div class='block_result'>
+        {% for question in questions %}
+        <div class="question">
+            <img src="{{ question.image }}" alt="{{ question.text }}">
+            <p>{{ question.text }}</p>
+            <ul>
+                <li{% if question.correct_option == 1 %} style="color: #00c66a;"{% endif %}>{{ question.option1 }}</li>
+                <li{% if question.correct_option == 2 %} style="color: #00c66a;"{% endif %}>{{ question.option2 }}</li>
+                <li{% if question.correct_option == 3 %} style="color: #00c66a;"{% endif %}>{{ question.option3 }}</li>
+            </ul>
+        </div>
+            {% endfor %}
+                <a href="{% url 'reset_quiz' %}">Сбросить результаты и начать заново</a>
+            {% endblock %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+/* Style for the contact section */
+.contact {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 40px;
+    text-align: center;
+  }
+  
+  /* Style for the contact information */
+  .contact2 {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact2 h2 {
+    font-size: 24px;
+    color: #008000; /* Green color for the heading */
+  }
+  
+  .contact2 p {
+    font-size: 18px;
+    color: #333; /* Dark gray color for the text */
+  }
+  
+  .contact2 a {
+    display: block;
+    font-size: 20px;
+    color: #008000; /* Green color for the phone number */
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .contact2 a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style for the Google Maps iframe */
+  .maps iframe {
+    width: 100%;
+    height: 40rem;
+    border: none;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .contact {
+      padding: 20px;
+    }
+  
+    .contact2 {
+      padding: 10px;
+    }
+  }
